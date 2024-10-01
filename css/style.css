@@ -15,5 +15,66 @@ body #content-wrapper {
   width: 100%;
   height: 100%;
   background-color: green;
-  color: red;
+}
+body #content-wrapper nav {
+  height: 60px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1.25em;
+}
+body #content-wrapper nav #logo {
+  text-transform: uppercase;
+}
+body #content-wrapper nav #hamburger {
+  display: flex;
+  height: 30px;
+  width: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  cursor: pointer;
+}
+body #content-wrapper nav #hamburger span {
+  height: 0.25em;
+  background-color: white;
+  width: 100%;
+}
+body #content-wrapper main {
+  height: calc(100% - 120px);
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #content-wrapper main .hide {
+  display: none;
+}
+body #content-wrapper main .show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35%;
+  background-color: blue;
+}
+body #content-wrapper main .show a {
+  color: white;
+  text-decoration: none;
+}
+body #content-wrapper footer {
+  height: 60px;
+  background-color: white;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */

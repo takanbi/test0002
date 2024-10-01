@@ -4,13 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
    <div id="content-wrapper">
-    <nav></nav>
-    <main></main>
+    <nav>
+        <h3 id="logo" class="poppins-medium">Logo</h3>
+        <section id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+    </nav>
+    <main>
+        <!-- <nav id="navigation" class="hide"> -->
+        <nav id="navigation">
+            <a href="#" class="poppins-regular">Home</a>
+            <a href="#" class="poppins-regular">About</a>
+            <a href="#" class="poppins-regular">Gallery</a>
+            <a href="#" class="poppins-regular">Contact</a>
+        </nav>
+    </main>
     <footer></footer>
-   </div> 
+   </div>
+   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+   <script>
+
+$(document).ready(function(){
+
+// jQuery methods go here...
+let hamburger = $("#hamburger");
+    let navigation = $("#navigation");
+    navigation.addClass("hide");
+    let isShow = false;
+    hamburger.click(()=> {
+        showNav();
+    }) 
+    // {
+    //     navigation.removeClass("hide");
+    //     navigation.addClass("show");
+
+    // }
+    console.log(hamburger);
+
+    function showNav() {
+        if(isShow == false) {
+            navigation.addClass("show").removeClass("hide");
+            isShow = true;
+        }
+        
+        else if(isShow == true) {
+        navigation.addClass("hide").removeClass("show");
+        isShow = false;
+    }
+}
+
+});
+
+   </script> 
 </body>
 </html>
